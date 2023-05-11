@@ -234,6 +234,7 @@ const ServerSidePagination = ({
     }),
     [totalData, numberOfRows, page, showLoader, customOptions]
   );
+  console.log("studentData", studentData);
   return (
     <MUIDataTable
       title={<SearchBar searchByName={getSearchApi} />}

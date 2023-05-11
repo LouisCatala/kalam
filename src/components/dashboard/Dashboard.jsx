@@ -174,10 +174,10 @@ const DashboardPage = ({ displayData, title, url, isCampus = false }) => {
     }
 
     const sData = studentData.map((data) => {
-      console.log("data", data);
-      console.log("isCampus", isCampus);
-      console.log("dConvert", dConvert);
-      console.log(" dConvert(data, isCampus)", dConvert(data, isCampus));
+      // console.log("data", data);
+      // console.log("isCampus", isCampus);
+      // console.log("dConvert", dConvert);
+      // console.log(" dConvert(data, isCampus)", dConvert(data, isCampus));
       return dConvert(data, isCampus);
     });
 
@@ -343,6 +343,8 @@ const DashboardPage = ({ displayData, title, url, isCampus = false }) => {
     </Grid>
   );
 
+  console.log("students", students);
+
   const options2 = allStudents.length > 0 && (
     <Grid container spacing={3} sx={{ paddingY: "0.8rem" }}>
       <Grid
@@ -395,6 +397,7 @@ const DashboardPage = ({ displayData, title, url, isCampus = false }) => {
       </Grid> */}
     </Grid>
   );
+  console.log("students in donor", students);
   return (
     <Box sx={{ paddingX: "1.2rem", paddingY: "0.2rem" }}>
       {locationCampus === "campus" ? options2 : options}
